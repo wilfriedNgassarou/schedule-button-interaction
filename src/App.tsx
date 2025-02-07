@@ -1,12 +1,14 @@
 import { AnimatePresence, motion } from "motion/react"
 import { useState } from "react"
 import { Calendar3, ChevronDown, X } from "react-bootstrap-icons"
+import { Credits } from "./components/credits"
 
 function App() {
   const [state, setState] = useState<'collapsed' | 'extended'>('collapsed')
 
   return (
     <section className="w-full h-dvh flex flex-col items-center justify-center">
+      <Credits />
       <div className="w-80 h-44 py-2 overflow-hidden flex flex-col justify-between bg-white relative z-10 rounded-3xl border-[1px] border-gray-500/40">
         <textarea
           className="px-4 pt-2 outline-none flex-grow resize-none placeholder:text-gray-400"
